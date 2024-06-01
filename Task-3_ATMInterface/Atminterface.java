@@ -81,8 +81,8 @@ public class Atminterface
 
 		public class Main {
 		    public static void main(String[] args) {
-		        BankAccount userAccount = new BankAccount(1000); // Initial balance
-		        ATM atm = new ATM(userAccount);
+		        BankAccount userAccount = new BankAccount(1000);
+		        Atminterface atm = new Atminterface(userAccount);
 		        atm.run();
 		    }
 		}
