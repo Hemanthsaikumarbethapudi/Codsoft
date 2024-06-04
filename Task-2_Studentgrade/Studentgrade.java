@@ -2,21 +2,17 @@ import java.util.*;
 
 public class Studentgrade {
     public static void main(String[] args) {
-        int Totalmarks = 0;
-        int python, java, c, Html;
         Scanner sc = new Scanner(System.in);
-        python = sc.nextInt();
-        System.out.println("Enter the Marks in Python : " + python + " / 100");
-        java = sc.nextInt();
-        System.out.println("Enter the Marks in Java : " + java + " / 100");
-        c = sc.nextInt();
-        System.out.println("Enter the Marks in C: " + c + " / 100");
-        Html = sc.nextInt();
-        System.out.println("Enter the Marks in HTML : " + Html + " / 100");
-        sc.close();
-        Totalmarks = python + java + c + Html;
-        System.out.println("Total marks you got is : " + Totalmarks + " / 100");
-        int AvgMarks = (Totalmarks * 100) / 500;
+        int numsubject = sc.nextInt();
+        System.out.println("Enter the Number of subjects : " + numsubject);
+        int Totalmarks = 0;
+        for (int i = 1; i <= numsubject; i++) {
+            System.out.println("Enter the marks you obtained: " + i + ": ");
+            int marks = sc.nextInt();
+            Totalmarks += marks;
+        }
+        System.out.println("Total marks you got is : " + Totalmarks);
+        double AvgMarks = (double) Totalmarks / (numsubject * 100) * 100;
         System.out.println("Average percentage of the student : " + AvgMarks);
 
         char grade;
